@@ -11,7 +11,7 @@ import pickle
 
 import config
 
-SEED = 42
+SEED = config.SEED
 
 # Configure and create logger
 
@@ -124,7 +124,6 @@ for key in tickers.keys():
 
 reports_path = os.path.join(current_dir, 'DATA','reports.pkl')
 prices_path = os.path.join(current_dir, 'DATA','prices.pkl')
-
 
 with open(reports_path, 'wb') as outp:
     pickle.dump(reports, outp, pickle.HIGHEST_PROTOCOL)
